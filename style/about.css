@@ -1,0 +1,176 @@
+/* ===== BANNER VIDEO ===== */
+.page-banner1 {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 2;
+}
+
+.page-banner1 h1 {
+    position: relative;
+    z-index: 3;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* ===== ABOUT BLOCK ===== */
+.about-block {
+    margin-bottom: 60px;
+}
+
+.about-block h2 {
+    color: #b71c1c;
+    margin-bottom: 20px;
+}
+
+.about-block h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #8e0000;
+}
+
+.about-block p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-block ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.about-block li {
+    margin-bottom: 8px;
+}
+
+/* ===== GALLERY GIỚI THIỆU ===== */
+.gallery-gioithieu {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-img-gioithieu img {
+    width: 60%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-img-gioithieu figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* ===== IMAGE ROW ===== */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.image-row figure {
+    text-align: center;
+}
+
+.image-row img {
+    width: 400px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
+}
+
+.image-row figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* ===== TẾT KHÁC ===== */
+.tet-khac {
+    background: #fff3e0;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.tet-khac h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c62828;
+}
+
+.tet-khac p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.tet-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.tet-images figure {
+    text-align: center;
+}
+
+.tet-images img {
+     width: 400px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.tet-images img:hover {
+    transform: scale(1.05);
+}
+
+.tet-images figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}.page-banner1 .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;        /* full chiều ngang màn hình */
+    height: 56.25vw;     /* giữ tỉ lệ 16:9 */
+    min-height: 350px;   /* không thấp hơn banner */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

@@ -1,0 +1,149 @@
+/* ===============================
+   PAGE BANNER
+================================= */
+
+.page-banner {
+    position: relative;
+    height: 350px;
+    background: url("../image/lien_he.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.page-banner .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.page-banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+/* ===============================
+   CONTACT SECTION
+================================= */
+
+.contact-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 50px;
+}
+
+/* Card chung cho 3 phần */
+.contact-form,
+.map-section,
+.author-info {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.contact-form h2,
+.map-section h2,
+.author-info h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #b22222;
+}
+
+/* ===============================
+   FORM STYLE
+================================= */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #b22222;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(178,34,34,0.1);
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Button */
+.contact-form button {
+    padding: 15px;
+    background: linear-gradient(45deg, #b22222, #d90429);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   MAP
+================================= */
+
+.map-section iframe {
+    border-radius: 15px;
+}
+
+/* ===============================
+   AUTHOR INFO
+================================= */
+
+.author-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .page-banner h1 {
+        font-size: 28px;
+    }
+}/* ===============================
+   AUTHOR INFO (CĂN GIỮA)
+================================= */
+
+.author-info {
+    text-align: center;
+}
+
+.author-info p {
+    margin: 12px 0;
+    font-size: 18px;
+}

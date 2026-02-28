@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>XUÂN QUÊ TÔI - TẾT SÓC TRĂNG</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/home.css">
+</head>
+
+<body>
+
+<!-- Hoa mai rơi -->
+<div class="flower-container"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>XUÂN QUÊ TÔI</h1>
+        <p>Tết Nguyên Đán ở Sóc Trăng – Nét đẹp giao thoa văn hóa Kinh - Hoa - Khmer</p>
+    </div>
+</header>
+
+<!-- ===== MENU ===== -->
+<nav class="main-nav">
+    <ul>
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="phongtuc.html">Phong tục</a></li>
+        <li><a href="amthuc.html">Ẩm thực</a></li>
+        <li><a href="vanhoa.html">Văn hóa</a></li>
+        <li><a href="kyuc.html">Ký ức</a></li>
+        <li><a href="hinhanh.html">Hình ảnh</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<!-- ===== GIỚI THIỆU ===== -->
+<section class="intro">
+    <h2>Tết ở Sóc Trăng có gì đặc biệt?</h2>
+
+    <p>
+        Mỗi độ xuân về, Sóc Trăng khoác lên mình chiếc áo mới rực rỡ sắc màu.
+        Từ những con đường làng yên bình đến các khu chợ nhộn nhịp,
+        đâu đâu cũng tràn ngập không khí Tết.
+    </p>
+
+    <p>
+        Tết ở Sóc Trăng không chỉ là dịp sum họp gia đình mà còn là sự giao thoa
+        văn hóa đặc sắc giữa ba dân tộc Kinh – Khmer – Hoa.
+        Những phong tục truyền thống, mâm cơm ngày Tết,
+        và tiếng cười trẻ thơ tạo nên một mùa xuân ấm áp và đầy ý nghĩa.
+    </p>
+</section>
+
+<!-- ===== MỤC NỔI BẬT ===== -->
+<section class="highlight">
+    <div class="card">
+        <img src="image/phongtuc.webp" alt="">
+        <h3>Phong tục ngày Tết</h3>
+        <a href="phongtuc.html">Xem thêm</a>
+    </div>
+
+    <div class="card">
+        <img src="image/banhpia.jpg" alt="">
+        <h3>Ẩm thực quê hương</h3>
+        <a href="amthuc.html">Xem thêm</a>
+    </div>
+
+    <div class="card">
+        <img src="image/vanhoa1.jpg" alt="">
+        <h3>Văn hóa - Lễ hội</h3>
+        <a href="vanhoa.html">Xem thêm</a>
+    </div>
+</section>
+
+<!-- ===== HÌNH ẢNH ===== -->
+<section class="gallery">
+    <h2>Hình ảnh Tết Sóc Trăng</h2>
+
+    <div class="gallery-img">
+        <img src="image/tet1.jpg" alt="">
+        <img src="image/tet2.webp" alt="">
+        <img src="image/tet3.jpg" alt="">
+        <img src="image/tet4.webp" alt="">
+    </div>
+</section>
+
+<!-- ===== TRÍCH DẪN ===== -->
+<section class="quote">
+    <p>"Tết là khi người ta nhớ về quê hương nhiều nhất."</p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>Website thực hiện bởi: Minh Thiện - 2026</p>
+</footer>
+
+<!-- ===== JS HOA MAI ===== -->
+<script>
+const container = document.querySelector('.flower-container');
+
+function createFlower() {
+    const flower = document.createElement('div');
+    flower.classList.add('flower');
+    flower.innerHTML = "🌼";
+
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (6 + Math.random() * 4) + "s";
+    flower.style.fontSize = (15 + Math.random() * 15) + "px";
+
+    container.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 10000);
+}
+
+setInterval(createFlower, 600);
+</script>
+
+</body>
+</html>

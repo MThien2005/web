@@ -1,0 +1,230 @@
+/* =================================
+   HERO VIDEO
+================================= */
+
+.hero-video {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Video nền full */
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Overlay tối */
+.hero-video::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+/* Nội dung hero */
+.hero-video .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-video h1 {
+    font-size: 44px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* =================================
+   HERO HÌNH ẢNH (NẾU KHÔNG DÙNG VIDEO)
+================================= */
+
+.hero {
+    position: relative;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 44px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.hero-hinhanh {
+    background: url("../image/z4.jpg") center/cover no-repeat;
+}
+
+/* =================================
+   MEDIA SECTION
+================================= */
+
+.media-section {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 60px 40px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.media-section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #b22222;
+}
+
+/* =================================
+   ALBUM & VIDEO TITLE
+================================= */
+
+.album h2,
+.video-section h2 {
+    margin-bottom: 25px;
+    color: #b22222;
+    font-size: 26px;
+}
+
+/* =================================
+   GALLERY GRID (RESPONSIVE)
+================================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Card */
+.item {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    transition: all 0.4s ease;
+}
+
+/* Ảnh đồng bộ chiều cao */
+.item img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect */
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.item:hover img {
+    transform: scale(1.08);
+}
+
+/* Caption */
+.item p {
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #444;
+    margin: 0;
+}
+
+/* =================================
+   VIDEO SECTION
+================================= */
+
+.video-wrapper {
+    margin-top: 30px;
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+    .hero-video,
+    .hero {
+        height: 300px;
+    }
+
+    .hero-video h1,
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .media-section {
+        padding: 40px 20px;
+    }
+
+    .item img {
+        height: 250px;
+    }
+}/* ===== HERO VIDEO FULL WIDTH ===== */
+.hero-video {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+.hero-video .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.hero-video .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.hero-video .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    top: 40%;
+    font-size: 36px;
+}
